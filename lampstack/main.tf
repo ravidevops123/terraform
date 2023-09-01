@@ -144,7 +144,7 @@ security_group_id = "${aws_security_group.db_security_group.id}"
 resource "aws_instance" "my_web_instance" {
 ami = "ami-0aeeebd8d2ab47354"
 instance_type = "t2.micro"
-key_name = "ravidevops" #make sure you have your_private_ket.pem file
+key_name = "ravidevops1" #make sure you have your_private_ket.pem file
 vpc_security_group_ids = ["${aws_security_group.web_security_group.id}"]
 subnet_id = "${aws_subnet.myvpc_public_subnet.id}"
 tags = {
@@ -175,7 +175,7 @@ user = "ec2-user"
 password = ""
 #copy <your_private_key>.pem to your local instance home directory
 #restrict permission: chmod 400 <your_private_key>.pem
-private_key = "${file("/home/ec2-user/ravidevops.pem")}"
+private_key = "${file("/home/ec2-user/ravidevops1.pem")}"
 }
 }
 #create aws rds subnet groups
