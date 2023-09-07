@@ -1,8 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "ravidevops123"
+    bucket = "raviapptest"
     key    = "QA/terraform.tfstate"
-    key    = "QA/terraform.tfstate.backup"
     region = "us-east-1"
   }
 }
